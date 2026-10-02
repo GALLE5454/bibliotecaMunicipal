@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Personas Importantes - Biblioteca Municipal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="franja"></div>
+
+  <!-- CABECERA: LOGOS Y NAVEGACION ENTRE PAGINAS -->
+  <header class="cabecera">
+    <div class="cabecera-in">
+      <a class="marca" href="index.html">
+        <img src="imagenes/biblioteca_logo.webp" alt="Biblioteca Municipal Alberto Velásquez">
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="areas.html">Áreas</a>
+        <a href="lugares.html">Hechos históricos</a>
+        <a href="personas.html" aria-current="page">Personajes</a>
+      </nav>
+      <img class="escudo" src="imagenes/muni_logo.png" alt="Municipalidad de Quetzaltenango">
+    </div>
+  </header>
+
+    <!-- TITULO DE LA PAGINA -->
+  <div class="banner">
+    <div class="banner-in">
+      <h1>Personajes</h1>
+    </div>
+  </div>
+
+  <!-- CONTENIDO CENTRAL -->
+  <main id="contenido">
+
+    <!-- CATALOGO: CADA FICHA ABRE SU VENTANA DE INFORMACION -->
+    <div class="galeria-grid galeria-personas">
+      <button type="button" class="foto-item" onclick="mostrarInfo(1)">
+        <img src="imagenes/4autores.jpg" alt="Cuatro ilustres quetzaltecos" loading="lazy">
+        <span class="foto-titulo">Cuatro ilustres quetzaltecos</span>
+      </button>
+      <button type="button" class="foto-item" onclick="mostrarInfo(4)">
+        <img src="imagenes/alberto.jpg" alt="Alberto Velásquez (1891-1968)" loading="lazy">
+        <span class="foto-titulo">Alberto Velásquez (1891-1968)</span>
+      </button>
+      <button type="button" class="foto-item" onclick="mostrarInfo(5)">
+        <img src="imagenes/foto3.jpg" alt="Osmundo Arriola (1886-1938)" loading="lazy">
+        <span class="foto-titulo">Osmundo Arriola (1886-1938)</span>
+      </button>
+      <button type="button" class="foto-item" onclick="mostrarInfo(6)">
+        <img src="imagenes/wild.jpg" alt="Carlos Wyld Ospina (1891-1956)" loading="lazy">
+        <span class="foto-titulo">Carlos Wyld Ospina (1891-1956)</span>
+      </button>
+      <button type="button" class="foto-item" onclick="mostrarInfo(7)">
+        <img src="imagenes/Rafael.JPG" alt="Rafael Álvarez Ovalle (1858-1946)" loading="lazy">
+        <span class="foto-titulo">Rafael Álvarez Ovalle (1858-1946)</span>
+      </button>
+      <button type="button" class="foto-item" onclick="mostrarInfo(8)">
+        <img src="imagenes/Dolores.JPG" alt="Dolores Bedoya de Molina (1783)" loading="lazy">
+        <span class="foto-titulo">Dolores Bedoya de Molina (1783)</span>
+      </button>
+      <button type="button" class="foto-item" onclick="mostrarInfo(9)">
+        <img src="imagenes/milla.JPG" alt="José Milla y Vidaurre (1822-1882)" loading="lazy">
+        <span class="foto-titulo">José Milla y Vidaurre (1822-1882)</span>
+      </button>
+      <button type="button" class="foto-item" onclick="mostrarInfo(10)">
+        <img src="imagenes/rodolfo.jpg" alt="Rodolfo Robles Valverde (1878-1939)" loading="lazy">
+        <span class="foto-titulo">Rodolfo Robles Valverde (1878-1939)</span>
+      </button>
+      <button type="button" class="foto-item" onclick="mostrarInfo(11)">
+        <img src="imagenes/juan.jpg" alt="Juan José Ortega Carrascal (1857-1934)" loading="lazy">
+        <span class="foto-titulo">Juan José Ortega Carrascal (1857-1934)</span>
+      </button>
+    </div>
+
+    <!-- VENTANAS EMERGENTES CON LA INFO DE CADA PERSONA -->
+
+    
+    <div class="modal" id="modal-1" role="dialog" aria-modal="true" aria-label="Cuatro ilustres quetzaltecos">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(1)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(1, 11)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/foto1.jpg" alt="Cuatro ilustres quetzaltecos" loading="lazy">
+        <img src="imagenes/foto1b.jpg" alt="Cuatro ilustres quetzaltecos" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>Cuatro ilustres quetzaltecos</h2>
+        <p>Xelajú ha dado presidentes, alcaldes, músicos, pintores, escultores y maestros. Entre ellos destacan el poeta Osmundo Arriola (1886-1935), fundador del periódico Croma y ganador de los Juegos Florales Centroamericanos de 1916; el arquitecto y muralista Efraín Recinos, creador del Teatro Nacional de Guatemala y el Parque de la Industria; y el pintor Arturo Martínez Cárdenas (1911-1956), reconocido por su obra "La Piñata" y sus exposiciones en Europa.</p>
+           <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(1, 4)">&#10095;</button>
+      </div>
+    </div>
+
+  
+
+    <div class="modal" id="modal-3" role="dialog" aria-modal="true" aria-label="Centenario de don Alberto Velásquez">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(3)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(3, 1)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/velasquez_rotario_torre.jpg" alt="Centenario de don Alberto Velásquez" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>Centenario de don Alberto Velásquez</h2>
+        <p>A propósito del centenario de su nacimiento, se recuerda la vida de Alberto Velásquez, poeta, literato y periodista de gran arraigo en Quetzaltenango, quien trabajó en la Caja Reguladora y fue diputado a la Asamblea Constituyente en los años 1920-21. Su producción literaria, muy extensa, incluye poemas de profundo contenido social, como "Elegía de angustia a Guatemala". El artículo lamenta que ni las autoridades municipales ni los círculos literarios de la época le hayan rendido homenaje en la fecha de su centenario.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(3, 4)">&#10095;</button>
+      </div>
+    </div>
+
+
+    <div class="modal" id="modal-4" role="dialog" aria-modal="true" aria-label="Alberto Velásquez (1891-1968)">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(4)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(4, 1)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+       <img src="imagenes/alberto.jpg" alt="Alberto Velásquez (1891-1968)" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>Alberto Velásquez (1891-1968)</h2>
+        <p>Alberto Velásquez Günther nació en la Ciudad de Guatemala el 25 de septiembre de 1891. Destacó como poeta, periodista, académico y economista, dejando una huella en la literatura, la cultura y la economía de Guatemala. Falleció en 1968 en Guadalajara, México, pero, cumpliendo su voluntad, sus restos fueron repatriados a Quetzaltenango, la ciudad con la que mantuvo un fuerte vínculo.</p>
+        <p>Fue autor de la Jura a la Bandera de Guatemala (originalmente titulada Saludo a la Bandera), una de sus obras más reconocidas. Fundó instituciones clave como la Cruz Roja Guatemalteca y el Banco de Guatemala, donde fue vicepresidente y miembro de la Junta Monetaria (1946-1954), participando en el establecimiento del quetzal como moneda nacional.</p>
+        <p>En el ámbito periodístico y académico fue miembro de la Real Academia Española en Guatemala, codirector de la Revista Azul, director del Diario Los Altos y codirector del Diario El Pueblo. Recibió honores como Hijo Ilustre de Quetzaltenango (1947), Emeritísimum de la Facultad de Humanidades de la USAC (1947) y la Orden del Quetzal en Grado de Gran Cruz (1954).</p>
+        <p>Como poeta ganó los Juegos Florales de Quetzaltenango en dos ocasiones: 1917 con "Madrigal en Voz Baja" y 1927 con "Amigo". Entre sus obras destacan "Quiero sembrar para mi hijo", "Muerte cuando me llames", "En silencio", "A Xelajú, lecho de dulce muerte", "Xelajú", "Canto a Quetzaltenango", "Decálogo del Buen Quetzalteco" y su obra más emblemática, la "Jura a la Bandera". Hoy un busto lo recuerda junto al Teatro Municipal de Quetzaltenango, y la Biblioteca Municipal lleva su nombre en su honor.</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(4, 5)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-5" role="dialog" aria-modal="true" aria-label="Osmundo Arriola (1886-1938)">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(5)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(5, 4)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+     <img src="imagenes/osmundox.JPG" alt="Osmundo Arriola (1886-1938)" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>Osmundo Arriola (1886-1938)</h2>
+        <p>Nació el 4 de diciembre de 1886 en Quetzaltenango, Guatemala. Fue un poeta, tipógrafo y periodista que desempeñó un papel importante en la vida cultural y literaria de su país, con un estilo poético elegante y melancólico, de fuerte carga emocional.</p>
+        <p>Trabajó como tipógrafo y fundó el diario "Cronos", plataforma para la difusión de ideas literarias y políticas. En los Juegos Florales de Quetzaltenango ganó el primer lugar en 1916 con "Canto a Minerva" y en 1917 con "Querido Rincón". Entre sus obras destacan "El libro de la Tierra" (1931) y "El libro de la Amada" (1936).</p>
+        <p>Fue un gran impulsor de los Juegos Florales de Quetzaltenango y, a través de Cronos, difundió ideas que influyeron en la sociedad quetzalteca, ayudando a consolidar la identidad literaria de la región del altiplano guatemalteco. Falleció el 8 de diciembre de 1938, dejando un legado que sigue siendo recordado en el ámbito literario de Quetzaltenango.</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(5, 6)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-6" role="dialog" aria-modal="true" aria-label="Carlos Wyld Ospina (1891-1956)">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(6)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(6, 5)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+         <img src="imagenes/wild.jpg" alt="Carlos Wyld Ospina (1891-1956)" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>Carlos Wyld Ospina (1891-1956)</h2>
+        <p>Nació el 19 de junio de 1891 en Antigua Guatemala, pero pasó gran parte de su vida en Quetzaltenango. Fue novelista, poeta y ensayista, reconocido por retratar la realidad social guatemalteca a través de la literatura, y formó parte de la Generación del 10 junto a figuras como Carlos Mérida y Rafael Yela Günther.</p>
+        <p>Fue catedrático de Literatura en la Universidad de San Carlos de Guatemala y miembro fundador de la Academia de Geografía e Historia de Guatemala. Se le considera pionero de la novela guatemalteca por abordar temas sociales, políticos y raciales con una profundidad poco común en su época.</p>
+        <p>Su obra más famosa, "La Gringa" (1927), relata el choque cultural entre extranjeros y la sociedad guatemalteca. También escribió "El solar de los Gonzaga" y "La Mala Hembra", además de ensayos sobre historia y filosofía. Falleció el 19 de junio de 1956 en Quetzaltenango, y su obra sigue siendo objeto de estudio en la literatura guatemalteca.</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(6, 7)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-7" role="dialog" aria-modal="true" aria-label="Rafael Álvarez Ovalle (1858-1946)">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(7)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(7, 6)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+  <img src="imagenes/Rafael.JPG" alt="Rafael Álvarez Ovalle (1858-1946)" loading="lazy">
+</div>
+          <div class="modal-info">
+        <h2>Rafael Álvarez Ovalle (1858-1946)</h2>
+        <p>Nació el 24 de octubre de 1858 en San Juan Comalapa, Chimaltenango. Hijo de un maestro de capilla, mostró desde niño un talento notable para la música. Al fallecer su padre en 1874, con solo 12 años, asumió la dirección de la escuela de música en Santa Lucía Cotzumalguapa.</p>
+        <p>En 1879 se trasladó a la capital para estudiar en la Escuela de Sustitutos de la Banda Nacional, dominando instrumentos como la guitarra y el pícolo. Es el autor de la música del Himno Nacional de Guatemala, adoptado oficialmente el 19 de febrero de 1897 y estrenado el 14 de marzo del mismo año en el Teatro Colón.</p>
+        <p>Fue maestro en el Conservatorio Nacional de Música y fundó conjuntos musicales como las estudiantinas "La Broma" y "La Tuna", además de la "Concertina Guatemalteca". Entre sus obras también están "O Salutaris" y la "Marcha Fúnebre El Nazareno". Falleció el 26 de diciembre de 1946, y en su honor se instituyó la "Orden Rafael Álvarez Ovalle", distinción a la música nacional y extranjera.</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(7, 8)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-8" role="dialog" aria-modal="true" aria-label="Dolores Bedoya de Molina (1783)">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(8)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(8, 7)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/Dolores.JPG" alt="Dolores Bedoya de Molina (1783)" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>Dolores Bedoya de Molina (1783)</h2>
+        <p>Nació el 20 de septiembre de 1783 en Guatemala. Al convertirse en esposa del Dr. Pedro Molina, desempeñó junto a él un papel clave en la lucha por la independencia de Guatemala.</p>
+        <p>Fue una figura clave en los sucesos del 15 de septiembre de 1821, siendo la única mujer que participó activamente en los movimientos independentistas: encabezó y alentó a la multitud que presionó a favor de la independencia afuera del Palacio de Gobierno, y organizó celebraciones con música y fuegos artificiales que aumentaron el fervor popular.</p>
+        <p>Cuando su esposo se convirtió en Jefe de Estado, mantuvo su apoyo a la gestión y defendió los ideales de libertad, viviendo el exilio durante varios años debido a conflictos políticos. En el bicentenario de su nacimiento se creó la Fundación Dolores Bedoya de Molina, dedicada a investigar la situación de la mujer en Guatemala y promover su desarrollo y empoderamiento.</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(8, 9)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-9" role="dialog" aria-modal="true" aria-label="José Milla y Vidaurre (1822-1882)">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(9)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(9, 8)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+         <img src="imagenes/milla.JPG" alt="José Milla y Vidaurre (1822-1882)" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>José Milla y Vidaurre (1822-1882)</h2>
+        <p>Nacido el 4 de agosto de 1822 bajo el seudónimo "Salomé Gil", fue novelista, periodista, escritor, diplomático y político. Quedó huérfano a los 7 años y fue criado por parientes cercanos; su pasión por la literatura lo llevó a abandonar la Escuela de Derecho para dedicarse a la escritura.</p>
+        <p>Colaboró con los presidentes Rafael Carrera y Mariano de Aycinena, y fue firmante del tratado Wyke-Aycinena, que definió la relación de Guatemala con el Reino Unido respecto a Belice. Trabajó como redactor en La Gaceta Oficial y La Semana, y fue uno de los primeros periodistas del Diario de Centroamérica.</p>
+        <p>Es considerado "El Padre de la Novela Guatemalteca" por sus cuadros de costumbres y novelas históricas. Entre sus obras están "Un viaje al otro lado del mundo pasando por otras partes", "Historia de un pepe", "Memorias de un abogado" y "La hija del Adelantado". Falleció el 30 de septiembre de 1882, dejando un legado literario fundamental para Guatemala.</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(9, 10)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-10" role="dialog" aria-modal="true" aria-label="Rodolfo Robles Valverde (1878-1939)">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(10)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(10, 9)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+       <img src="imagenes/rodolfo.jpg" alt="Rodolfo Robles Valverde (1878-1939)" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>Rodolfo Robles Valverde (1878-1939)</h2>
+        <p>Nació el 14 de enero de 1878 en Quetzaltenango. Fue médico, investigador y académico, reconocido por sus estudios en enfermedades tropicales. Estudió en el Colegio de Santa Clara en California y en la Universidad de París, donde obtuvo su título de Doctor en Medicina y Cirugía en 1904.</p>
+        <p>Uno de sus descubrimientos más importantes fue la identificación de la oncocercosis humana en Guatemala, enfermedad parasitaria que produce ceguera, publicado en 1919 y clave en la lucha contra esta enfermedad en América Latina. También investigó la piorrea dental, la colibacilosis y enfermedades hepáticas.</p>
+        <p>Fue profesor de Medicina, Cirugía y Bacteriología en la Universidad de San Carlos, director del Instituto Nacional de Vacuna (1908) y decano fundador de la Facultad de Ciencias Naturales y Farmacia. Recibió la Orden de la Legión de Honor de Francia. Falleció en 1939, y en su honor el Hospital Rodolfo Robles en Guatemala lleva su nombre.</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(10, 11)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-11" role="dialog" aria-modal="true" aria-label="Juan José Ortega Carrascal (1857-1934)">
+      <div class="modal-contenido">
+        <button type="button" class="cerrar" aria-label="Cerrar" onclick="cerrarModal(11)">&times;</button>
+        <button type="button" class="flecha-modal flecha-modal-izq" aria-label="Anterior" onclick="cambiarFoto(11, 10)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/juan.jpg" alt="Juan José Ortega Carrascal (1857-1934)" loading="lazy">
+          </div>
+          <div class="modal-info">
+        <h2>Juan José Ortega Carrascal (1857-1934)</h2>
+        <p>Nació el 7 de noviembre de 1857 en Quetzaltenango. Fue médico, cirujano y reformador del sistema de salud en Guatemala. Obtuvo su título de Médico y Cirujano en Guatemala en 1878 y se doctoró en Medicina en París, Francia, en 1882.</p>
+        <p>Reformó el Hospital San Juan de Dios introduciendo rayos X y equipos de diagnóstico, además de la antisepsia y asepsia en las intervenciones médicas. Fundó la Escuela de Comadronas en 1883 y el Instituto Dental en 1905, y creó las cátedras de Bacteriología, Ginecología y Anatomía Patológica.</p>
+        <p>Ocupó cargos diplomáticos como Enviado Extraordinario y Ministro Plenipotenciario de Guatemala en México (1910-1915) y ante el Gobierno de España (1916-1921); en 1910 asumió por unas horas la Presidencia de México como Decano del Cuerpo Diplomático. Fue Presidente de la Asamblea Nacional Legislativa de Guatemala al momento de su fallecimiento, el 29 de abril de 1934.</p>
+        </div>
+        </div>
+        <button type="button" class="flecha-modal flecha-modal-der" aria-label="Siguiente" onclick="cambiarFoto(11, 1)">&#10095;</button>
+      </div>
+    </div>
+
+  </main>
+
+    <!-- PIE DE PAGINA -->
+  <footer class="pie-negro">
+    <div class="pie-in con-fuentes">
+      <p class="copy">@Copyright 2010-2026. Biblioteca Municipal</p>
+      <div class="fuentes">
+        <h3>Fuentes</h3>
+        <ul>
+          
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AQUI SE CONECTA EL ARCHIVO DE JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
