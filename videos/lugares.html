@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Noticias de Lugares - Biblioteca Municipal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA AZUL DE CONTACTO -->
+  <div class="barra-contacto">
+    <div class="barra-contacto-info">
+
+    </div>
+
+  </div>
+
+  <!-- BARRA SUPERIOR PARA NAVEGAR ENTRE PAGINAS -->
+  <header class="navbar">
+  <img src="imagenes/biblioteca_logo.webp" alt="Biblioteca Municipal Alberto Velásquez" class="navbar-logo">
+  <img src="imagenes/muni_logo.webp" alt="Municipalidad de Quetzaltenango" class="navbar-logo-muni">
+  <nav>
+    <a href="index.html">Inicio</a>
+       <a href="areas.html">Áreas</a>
+       <a href="lugares.html">Lugares Historicos</a>
+    <a href="personas.html">Personajes</a>
+  </nav>
+</header>
+
+  <!-- BANNER GRANDE -->
+  <div class="banner">
+    <h1>Noticias de Lugares</h1>
+  </div>
+
+  <!-- CONTENIDO CENTRAL -->
+  <main>
+
+    <!-- GALERIA CON FLECHAS -->
+    <div class="galeria-container">
+
+      <button class="flecha flecha-izq" onclick="moverIzquierda()">&#10094;</button>
+
+      <div class="galeria" id="galeria">
+        <div class="foto-item" onclick="mostrarInfo(1)"><p class="foto-titulo">El Centro Histórico de Xelajú</p><img src="imagenes/foto2.webp"></div>
+        
+        <div class="foto-item" onclick="mostrarInfo(3)"><p class="foto-titulo">485 años de historia</p><img src="imagenes/foto5.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(4)"><p class="foto-titulo">Pasajes históricos de Quetzaltenango</p><img src="imagenes/foto6.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(5)"><p class="foto-titulo">Palacio Municipal y Parque Centroamérica (1991)</p><img src="imagenes/noticias/01_Palacio_Municipal_y_Parque_Centroamerica/pagina_01.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(6)"><p class="foto-titulo">Otro paso al frente de las municipalidades de Quetzaltenango</p><img src="imagenes/noticias/02_Otro_paso_al_frente_de_las_municipalidades/pagina_02.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(7)"><p class="foto-titulo">Banco de Occidente: 110 aniversario y actividades culturales</p><img src="imagenes/noticias/03_Banco_de_Occidente_110_aniversario/pagina_03.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(8)"><p class="foto-titulo">Distintas facetas de Quetzaltenango</p><img src="imagenes/noticias/04_Distintas_facetas_de_Quetzaltenango/pagina_04.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(9)"><p class="foto-titulo">Restauración del Teatro Municipal</p><img src="imagenes/noticias/05_Restauracion_del_Teatro_Municipal/pagina_06.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(10)"><p class="foto-titulo">Banco de Occidente instalará agencia en San Marcos</p><img src="imagenes/noticias/06_Banco_de_Occidente_instalara_agencia/pagina_07.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(11)"><p class="foto-titulo">Parque convertido en feria</p><img src="imagenes/noticias/07_Parque_convertido_en_feria/pagina_10.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(12)"><p class="foto-titulo">Escuela bancaria del Banco de Occidente</p><img src="imagenes/noticias/08_Escuela_bancaria_del_Banco_de_Occidente/pagina_11.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(13)"><p class="foto-titulo">Quetzaltenango hermoso... a pesar de todo</p><img src="imagenes/noticias/09_Quetzaltenango_hermoso_a_pesar_de_todo/pagina_12.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(14)"><p class="foto-titulo">Construcción escolar en abandono y Semana del Árbol</p><img src="imagenes/noticias/10_Construccion_escolar_y_Semana_del_Arbol/pagina_13.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(15)"><p class="foto-titulo">Conmemoraron gesta revolucionaria de 1871</p><img src="imagenes/noticias/11_Gesta_revolucionaria_y_actividades/pagina_14.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(16)"><p class="foto-titulo">Pueblo y Municipalidad construyendo un Quetzaltenango mejor</p><img src="imagenes/noticias/12_Pueblo_y_Municipalidad_Quetzaltenango_mejor/pagina_16.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(17)"><p class="foto-titulo">Teatro Municipal: cien años después de la primera piedra</p><img src="imagenes/noticias/13_Primer_Plano_Teatro_y_notas/pagina_17.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(18)"><p class="foto-titulo">Un monumento a la negligencia</p><img src="imagenes/noticias/14_Un_monumento_a_la_negligencia/pagina_18.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(19)"><p class="foto-titulo">Una solución al problema de la contaminación: producir menos basura</p><img src="imagenes/noticias/17_Reportaje_contaminacion_y_basura/pagina_20.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(20)"><p class="foto-titulo">Infraestructura comunitaria, nuevo comandante militar y Burger Shops</p><img src="imagenes/noticias/18_Infraestructura_y_Burger_Shops/pagina_21.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(21)"><p class="foto-titulo">Feria &quot;La Independencia&quot; 1993</p><img src="imagenes/noticias/19_Feria_La_Independencia_1993/pagina_22.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(22)"><p class="foto-titulo">Recorriendo Quetzaltenango</p><img src="imagenes/noticias/20_Recorriendo_Quetzaltenango/pagina_23.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(23)"><p class="foto-titulo">Sustituidas dos maestras señaladas responsables en la venta de plazas</p><img src="imagenes/noticias/21_Sustituidas_dos_maestras/pagina_24.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(24)"><p class="foto-titulo">Proselitismo atlético entre la juventud</p><img src="imagenes/noticias/22_Proseltismo_atletico_entre_la_juventud/pagina_25.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(25)"><p class="foto-titulo">Auténtico mago de Oriente llega a hospitalito</p><img src="imagenes/noticias/23_Mago_de_Oriente_en_hospitalito/pagina_26.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(26)"><p class="foto-titulo">Quetzaltenango y sus bellos sitios turísticos</p><img src="imagenes/noticias/24_Quetzaltenango_y_sus_bellos_sitios_turisticos/pagina_28.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(27)"><p class="foto-titulo">Decidirán el futuro de la Casa de la Cultura</p><img src="imagenes/noticias/25_Futuro_Casa_de_la_Cultura/pagina_30.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(28)"><p class="foto-titulo">Xelajú, una joya arquitectónica que merece ser revalorada (versión ampliada)</p><img src="imagenes/noticias/26_Xelaju_joya_arquitectonica/pagina_31.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(29)"><p class="foto-titulo">Arquitectura hidráulica de Quetzaltenango</p><img src="imagenes/noticias2/arquitectura_hidraulica.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(30)"><p class="foto-titulo">Arreaga Jerez reconoce crisis en el CUNOC</p><img src="imagenes/noticias2/cunoc_arriate.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(31)"><p class="foto-titulo">Día del Periodista fue conmemorado</p><img src="imagenes/noticias2/periodista_museo_obstruccion.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(32)"><p class="foto-titulo">Club Rotario recibe a Rudolf Walther</p><img src="imagenes/noticias2/velasquez_rotario_torre.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(33)"><p class="foto-titulo">El Eclipse: un acontecimiento digno de recordarse</p><img src="imagenes/noticias2/eclipse.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(34)"><p class="foto-titulo">Cruz Roja Departamental sí está haciendo obra</p><img src="imagenes/noticias2/cruzroja_mejoras_pavimento.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(35)"><p class="foto-titulo">Panorámica de Quetzaltenango (1990)</p><img src="imagenes/noticias2/panoramica1990.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(36)"><p class="foto-titulo">Homenaje al legado periodístico y literario altense</p><img src="imagenes/noticias2/homenaje_santiaguito.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(37)"><p class="foto-titulo">Catedral del Espíritu Santo</p><img src="imagenes/noticias2/catedral_espiritu_santo.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(38)"><p class="foto-titulo">Minerva, Parque Conmemorativo</p><img src="imagenes/noticias2/minerva_parque.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(39)"><p class="foto-titulo">Caso Gerardi: un reto para la justicia</p><img src="imagenes/noticias2/caso_gerardi.webp"></div>
+        <div class="foto-item" onclick="mostrarInfo(40)"><p class="foto-titulo">Restauración de la fachada de la Catedral (2001)</p><img src="imagenes/noticias2/catedral_restauracion_pnc.webp"></div>
+      </div>
+
+      <button class="flecha flecha-der" onclick="moverDerecha()">&#10095;</button>
+
+    </div>
+
+    <!-- VENTANAS EMERGENTES CON LA INFO DE CADA LUGAR -->
+
+    
+    <div class="modal" id="modal-1">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(1)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(1, 40)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/foto2.webp">
+        <img src="imagenes/foto2b.webp">
+          </div>
+          <div class="modal-info">
+        <h2>El Centro Histórico de Xelajú</h2>
+        <p>El centro de Quetzaltenango ocupa el mismo lugar desde la época precolombina, cuando era conocido como Shelajuj Noj ("Bajo los diez cerros"). La traza de la ciudad data de 1524; de la época colonial sobreviven la fachada de la antigua catedral, algunas ermitas y edificaciones entre la 6ª calle y 9ª avenida de la zona 1. A mediados del siglo XVIII llegó el estilo Neoclásico, y hoy el casco histórico ("la Ciudad de la Estrella") cubre unas 90 hectáreas declaradas patrimonio.</p>
+        <h2>Xelajú, una joya arquitectónica</h2>
+        <p>Aunque no quedan vestigios precolombinos visibles, Quetzaltenango conserva un fuerte ambiente colonial: la fachada original de la catedral y numerosos edificios de finales del siglo XIX e inicios del XX están reconocidos como patrimonio cultural del país. Entre las edificaciones emblemáticas destacan el Palacio Municipal, el Teatro Municipal, la Escuela de Artes y Oficios y la Universidad de Occidente, además de calles empedradas, balcones de hierro y la Iglesia de El Calvario.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(1, 3)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-2">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(2)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(2, 1)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/foto4.webp">
+        <img src="imagenes/foto4b.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Xelajú, una joya arquitectónica</h2>
+        <p>Aunque no quedan vestigios precolombinos visibles, Quetzaltenango conserva un fuerte ambiente colonial: la fachada original de la catedral y numerosos edificios de finales del siglo XIX e inicios del XX están reconocidos como patrimonio cultural del país. Entre las edificaciones emblemáticas destacan el Palacio Municipal, el Teatro Municipal, la Escuela de Artes y Oficios y la Universidad de Occidente, además de calles empedradas, balcones de hierro y la Iglesia de El Calvario.</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(2, 3)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-3">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(3)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(3, 1)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/foto5.webp">
+        <img src="imagenes/foto5b.webp">
+          </div>
+          <div class="modal-info">
+        <h2>485 años de historia</h2>
+        <p>El 15 de mayo de 1524, Pedro de Alvarado fundó el lugar bajo el nombre de "Quesaltenango de la Real Corona". El 29 de octubre de 1825 recibió el título oficial de ciudad. En 1884 se autorizó la Feria de la Independencia, y en 1916 se instituyeron los Juegos Florales, que en 1998 se internacionalizaron como Juegos Florales Hispanoamericanos. La ciudad también fue sede de la primera compañía de Bomberos Voluntarios del país.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(3, 4)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-4">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(4)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(4, 3)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/foto6.webp">
+        <img src="imagenes/quetzal.webp">
+        <img src="imagenes/losaltos.webp">
+        <img src="imagenes/idependencia.webp">
+          </div>
+          <div class="modal-info">
+        
+        <h2>Pasajes históricos de Quetzaltenango</h2>
+        <p>Xelajuj Noj («Bajo los diez númenes o cerros») y el nombre náhuatl Quetzaltenango («En la Muralla del Quetzal», representado con un ideograma de un quetzal sobre una muralla) definen el origen de la ciudad. Durante la Conquista, los españoles tomaron Shelajuj Noj tras cruentas batallas en el Pinal, el Cerro Quemado, el Siete Orejas, el volcán Santa María e Ixcanul, mientras la región sufría aislamiento por crecidas del río Samalá, mantenía un activo comercio local de maíz, trigo y textiles, y resistía la carga de las tropas invasoras de Vicente Filisola tras la anexión al imperio de Iturbide. En el proceso independentista, los pueblos centroamericanos rompieron con España y México mediante el decreto de independencia absoluta redactado por patriotas, dando paso a una efímera constitución federal y a la histórica cuna del Estado de Los Altos el 1 de julio de 1823. Más tarde, la Revolución Liberal del 3 de junio de 1871, encabezada por Miguel García Granados y Justo Rufino Barrios, impulsó el desarrollo urbano einstitucional con la creación del Banco de Occidente y la Universidad de Occidente.</p>
+        
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(4, 5)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-5">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(5)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(5, 4)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/01_Palacio_Municipal_y_Parque_Centroamerica/pagina_01.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Palacio Municipal y Parque Centroamérica (1991)</h2>
+        <p>Reportaje que documenta el deterioro estructural del Palacio Municipal, construido a finales del siglo XIX, cuyas columnas corintias, el piso de madera del Salón de Honor y el cielo de yeso presentaban graves daños. También registra el abandono del Parque Centroamérica, construido durante el gobierno del general Jorge Ubico, con sus arriates, columnas y el monumento al General Justo Rufino Barrios.</p>
+        <hr class="linea-pie">
+       <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(5, 6)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-6">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(6)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(6, 5)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/02_Otro_paso_al_frente_de_las_municipalidades/pagina_02.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Otro paso al frente de las municipalidades de Quetzaltenango</h2>
+        <p>La Asociación Departamental de Municipalidades de Quetzaltenango (AMUQ) realizó su III Reunión Departamental en Colomba Costa Cuca, con la asistencia de 17 alcaldes del departamento. Se abordaron temas como el uso del aporte constitucional, la necesidad de infraestructura municipal y la elaboración de planes de arbitrios para generar más ingresos.</p>
+        <hr class="linea-pie">
+ <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(6, 7)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-7">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(7)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(7, 6)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/03_Banco_de_Occidente_110_aniversario/pagina_03.webp">
+        <img src="imagenes/noticias/03_Banco_de_Occidente_110_aniversario/pagina_08.webp">
+        <img src="imagenes/noticias/03_Banco_de_Occidente_110_aniversario/pagina_09.webp">
+          </div>
+          <div class="modal-info">
+        
+        <h2>Banco de Occidente: 110 aniversario y actividades culturales</h2>
+        <p>El Banco de Occidente celebró su 110 aniversario con un concierto de gala de la Orquesta Clásica de Guatemala en el Teatro Municipal de Quetzaltenango. Al día siguiente ofreció un concierto gratuito frente a sus oficinas, como parte del programa "Cultura en los Parques", impulsado junto al Patronato de Bellas Artes y la Municipalidad de Guatemala.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(7, 8)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-8">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(8)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(8, 7)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/04_Distintas_facetas_de_Quetzaltenango/pagina_04.webp">
+        <img src="imagenes/noticias/04_Distintas_facetas_de_Quetzaltenango/pagina_05.webp">
+          </div>
+          <div class="modal-info">
+        
+        <h2>Distintas facetas de Quetzaltenango</h2>
+        <p>Recorrido fotográfico por diferentes zonas de la ciudad durante la temporada de Semana Santa, mostrando el Barrio La Transfiguración (uno de los más antiguos de Xelajú), la Calzada Revolución, el barrio Los Chocoyos, el edificio de Correos y Telégrafos, y las columnas y el escudo del Palacio Municipal.</p>
+        <hr class="linea-pie">
+         <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(8, 9)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-9">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(9)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(9, 8)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/05_Restauracion_del_Teatro_Municipal/pagina_06.webp">
+        <img src="imagenes/noticias/05_Restauracion_del_Teatro_Municipal/pagina_18.webp">
+        <img src="imagenes/noticias/05_Restauracion_del_Teatro_Municipal/pagina_19.webp">
+          </div>
+          <div class="modal-info">
+        
+        <h2>Restauración del Teatro Municipal</h2>
+        <p>El Teatro Municipal, construido por el maestro Agatón Bok e inaugurado en 1916 con la primera edición de los Juegos Florales (ganada por el poeta Osmundo Arriola), presentaba graves daños estructurales en sus columnas. Se documenta la inauguración de los trabajos de restauración, con la presencia de la Ministra de Cultura y Deportes y el alcalde municipal Roberto Pérez Maldonado.</p>
+        <hr class="linea-pie">
+         <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(9, 10)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-10">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(10)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(10, 9)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/06_Banco_de_Occidente_instalara_agencia/pagina_07.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Banco de Occidente instalará agencia en San Marcos</h2>
+        <p>Funcionarios del Banco de Occidente visitaron San Marcos para evaluar el movimiento comercial y económico de la región, con miras a instalar una nueva agencia bancaria en esa cabecera departamental, contando con el respaldo del alcalde municipal, el Ing. Daniel Caballeros Archila.</p>
+        <hr class="linea-pie"> <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(10, 11)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-11">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(11)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(11, 10)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/07_Parque_convertido_en_feria/pagina_10.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Parque convertido en feria</h2>
+        <p>Taxistas del contorno del Parque Centroamérica protestaron porque las celebraciones de la Virgen del Rosario convirtieron el parque en un campo de feria, con ventas de bebidas embriagantes y publicidad de una empresa cervecera que, según denunciaron, dañó los árboles y les impidió trabajar con normalidad.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(11, 12)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-12">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(12)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(12, 11)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/08_Escuela_bancaria_del_Banco_de_Occidente/pagina_11.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Escuela bancaria del Banco de Occidente</h2>
+        <p>El Banco de Occidente impartió cursos de capacitación a sus ejecutivos en la Universidad Rafael Landívar de Quetzaltenango, en áreas como economía, mercadeo, contabilidad financiera y administración de recursos humanos, como parte de su programa de formación con motivo de su 110 aniversario.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(12, 13)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-13">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(13)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(13, 12)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/09_Quetzaltenango_hermoso_a_pesar_de_todo/pagina_12.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Quetzaltenango hermoso... a pesar de todo</h2>
+        <p>Columna de opinión de 1992 que celebra el carácter de la ciudad y su Parque Centroamérica -construido por el Ing. Rafael Pérez de León entre 1935 y 1938- pese a señalar problemas de basura, falta de señalización adecuada y crecimiento urbano desordenado en distintos sectores.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(13, 14)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-14">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(14)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(14, 13)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/10_Construccion_escolar_y_Semana_del_Arbol/pagina_13.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Construcción escolar en abandono y Semana del Árbol</h2>
+        <p>Se documenta el abandono, desde hace varios años, de una construcción escolar en la Aldea Rancho de Teja, responsabilidad de Obras Públicas. Por separado, se relata la celebración de la Semana del Árbol organizada por la Municipalidad de Quetzaltenango, con jornadas de reforestación encabezadas por el alcalde Carlos Eduardo Arriola Estrada.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(14, 15)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-15">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(15)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(15, 14)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/11_Gesta_revolucionaria_y_actividades/pagina_14.webp">
+        <img src="imagenes/noticias/11_Gesta_revolucionaria_y_actividades/pagina_15.webp">
+          </div>
+          <div class="modal-info">
+        
+        <h2>Conmemoraron gesta revolucionaria de 1871</h2>
+        <p>Desfile militar y concentración cívico-militar en el Parque Centroamérica para conmemorar la Revolución Liberal de 1871, encabezada por los generales Miguel García Granados y Justo Rufino Barrios, con una reseña histórica a cargo del historiador Roberto Calderón Gordillo al pie del monumento al General Barrios.</p>
+        <hr class="linea-pie">
+       <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(15, 16)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-16">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(16)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(16, 15)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/12_Pueblo_y_Municipalidad_Quetzaltenango_mejor/pagina_16.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Pueblo y Municipalidad construyendo un Quetzaltenango mejor</h2>
+        <p>Relata la inauguración de la pavimentación de la 14 avenida final, zona 3, obra realizada mediante un plan bipartito entre los vecinos y la Municipalidad presidida por el alcalde Carlos Eduardo Arriola Estrada, quien recibió una placa de reconocimiento de manos del Comité de Vecinos por su gestión.</p>
+        <hr class="linea-pie">
+       <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(16, 17)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-17">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(17)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(17, 16)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/13_Primer_Plano_Teatro_y_notas/pagina_17.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Teatro Municipal: cien años después de la primera piedra</h2>
+        <p>A propósito del centenario de la colocación de la primera piedra del Teatro Municipal, se repasa su historia posterior al terremoto de 1902 y el trabajo de talla en piedra del maestro Agatón Boj, visible tanto en el teatro como en las columnas y el escudo del Palacio Municipal.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(17, 18)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-18">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(18)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(18, 17)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/14_Un_monumento_a_la_negligencia/pagina_18.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Un monumento a la negligencia</h2>
+        <p>Reportaje sobre un edificio abandonado en la colonia Doctor Roberto Molina, que anteriormente funcionó como capilla religiosa y como sede de agrupaciones artísticas y culturales del sector, hoy en evidente estado de deterioro y abandono.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Robo o asalto en rentas deja entrever algunas situaciones especiales</h2>
+        <p>Nota sobre un hecho ocurrido en las oficinas de Rentas Internas de Quetzaltenango, calificado por las autoridades como un posible autorrobo o asalto, que evidenció deficiencias de seguridad en esa dependencia de Hacienda.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Hediondez y suciedad en el Calvario</h2>
+        <p>Reportaje sobre la acumulación de basura y los malos olores en un parquecito cercano a la iglesia de El Calvario, situación tolerada por la Municipalidad pese a las quejas reiteradas de vecinos y visitantes del lugar.</p>
+        <hr class="linea-pie">
+         <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(18, 19)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-19">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(19)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(19, 18)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/17_Reportaje_contaminacion_y_basura/pagina_20.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Una solución al problema de la contaminación: producir menos basura</h2>
+        <p>Reportaje especial sobre el manejo de desechos en Quetzaltenango, que señala la falta de mecanismos de recolección, clasificación y tratamiento de basura, así como la ausencia de control sobre desechos peligrosos, y plantea la reducción en el origen como la solución más viable.</p>
+        <hr class="linea-pie">
+         <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(19, 20)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-20">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(20)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(20, 19)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/18_Infraestructura_y_Burger_Shops/pagina_21.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Infraestructura comunitaria, nuevo comandante militar y Burger Shops</h2>
+        <p>Nota de enero de 1993 sobre inversión en infraestructura comunitaria en Ciudad Tecún Umán, la llegada de un nuevo comandante a la zona militar de Quetzaltenango, y el anuncio de la apertura de un restaurante Burger Shops en la Plaza Escala de la ciudad.</p>
+        <hr class="linea-pie">
+         <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(20, 21)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-21">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(21)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(21, 20)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/19_Feria_La_Independencia_1993/pagina_22.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Feria "La Independencia" 1993</h2>
+        <p>Portada del suplemento especial de El Quetzalteco dedicado al programa general de la Feria de la Independencia de Quetzaltenango de ese año, con una vista del Palacio Municipal y el Parque Centroamérica.</p>
+        <hr class="linea-pie">
+         <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(21, 22)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-22">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(22)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(22, 21)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/20_Recorriendo_Quetzaltenango/pagina_23.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Recorriendo Quetzaltenango</h2>
+        <p>Crónica turística de 1993 que recorre los principales monumentos de la ciudad: el Monumento a la Marimba, el obelisco al General Justo Rufino Barrios, la estatua de Tecún Umán del maestro Rodolfo Galeotti Torres, y el Calendario Azteca junto a la estatua de Benito Juárez.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(22, 23)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-23">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(23)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(23, 22)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/21_Sustituidas_dos_maestras/pagina_24.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Sustituidas dos maestras señaladas responsables en la venta de plazas</h2>
+        <p>Portada del periódico La Nación/Quetzaltenango del 26 de abril de 1977, que informa sobre la sustitución de dos maestras señaladas por su presunta responsabilidad en la venta irregular de plazas educativas.</p>
+        <hr class="linea-pie">
+         <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(23, 24)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-24">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(24)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(24, 23)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/22_Proseltismo_atletico_entre_la_juventud/pagina_25.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Proselitismo atlético entre la juventud</h2>
+        <p>Nota de agosto de 1976 sobre una campaña de promoción del atletismo entre jóvenes de Quetzaltenango y sus municipios, impulsada por el presidente del atletismo altense José Víctor Serrano, de cara a una carrera de 21 kilómetros por el centenario de la Facultad de Ciencias Jurídicas y Sociales de Occidente.</p>
+        <hr class="linea-pie">
+         <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(24, 25)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-25">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(25)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(25, 24)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/23_Mago_de_Oriente_en_hospitalito/pagina_26.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Auténtico mago de Oriente llega a hospitalito</h2>
+        <p>Portada navideña de 1976 que relata la visita de un mago procedente de África al hospital infantil de Quetzaltenango para entregar regalos a niños enfermos, junto a una fotografía del árbol de Navidad instalado por la Municipalidad en el Parque Centroamérica.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico ElQuetzalteco - Hemeroteca - Lic.German Scheel Aguilar </p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(25, 26)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-26">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(26)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(26, 25)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/24_Quetzaltenango_y_sus_bellos_sitios_turisticos/pagina_28.webp">
+        <img src="imagenes/noticias/24_Quetzaltenango_y_sus_bellos_sitios_turisticos/pagina_32.webp">
+          </div>
+          <div class="modal-info">
+        
+        <h2>Quetzaltenango y sus bellos sitios turísticos</h2>
+        <p>Recorrido por atractivos turísticos cercanos a la ciudad, como el valle de Almolonga, Zunil y la veneración a San Simón, junto con un repaso posterior del patrimonio cultural protegido del Centro Histórico de Quetzaltenango y sus edificios de interés arquitectónico.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / La Nación Quetzaltenango - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(26, 27)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-27">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(27)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(27, 26)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/25_Futuro_Casa_de_la_Cultura/pagina_30.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Decidirán el futuro de la Casa de la Cultura</h2>
+        <p>Nota sobre la discusión, llevada a cabildo abierto, respecto a la posible demolición del edificio que ocupaba la Casa de la Cultura para construir en su lugar un edificio de los Tribunales de Justicia, decisión suspendida por el Concejo Municipal ante la falta de consulta con la población.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / La Nación Quetzaltenango - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(27, 28)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-28">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(28)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(28, 27)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias/26_Xelaju_joya_arquitectonica/pagina_31.webp">
+        <img src="imagenes/noticias/26_Xelaju_joya_arquitectonica/pagina_32.webp">
+          </div>
+          <div class="modal-info">
+        
+        <h2>Xelajú, una joya arquitectónica que merece ser revalorada (versión ampliada)</h2>
+        <p>Reportaje detallado sobre la historia arquitectónica de Quetzaltenango desde la época precolombina (Xelajuj Noj), el impacto de los terremotos de 1765 y 1902 en la fisonomía de la ciudad, la evolución de los nombres de sus barrios desde 1885, y su elevación a categoría de ciudad en 1825 mediante el Decreto No. 63.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / La Nación Quetzaltenango - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(28, 29)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-29">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(29)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(29, 28)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/arquitectura_hidraulica.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Arquitectura hidráulica de Quetzaltenango</h2>
+        <p>Reportaje de la arquitecta Laura Barrientos sobre un vestigio arqueológico hallado cerca del Teatro Municipal: una alcantarilla que formó parte del acueducto general de la ciudad, correspondiente aproximadamente a mediados del siglo XVIII. El artículo explica el funcionamiento de este sistema hidráulico colonial, construido con cajas verticales de ladrillo llamadas "columnarios" para distribuir el agua a los puntos altos de la ciudad.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / elQuetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(29, 30)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-30">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(30)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(30, 29)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/cunoc_arriate.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Arreaga Jerez reconoce crisis en el CUNOC</h2>
+        <p>El director general del Centro Universitario de Occidente (CUNOC), licenciado Baldomero Arreaga Jerez, reconoció al concluir su gestión que solo pudo evitar la caída total de la institución, señalando como principales problemas la falta de disciplina académica y administrativa, y la resistencia al cambio dentro del centro de estudios.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Arriate en la Calzada de la Independencia</h2>
+        <p>Nota breve sobre la construcción de un arriate central en la Calzada de la Independencia, a la entrada de Xelajú, con el fin de dar ornamentación y mayor seguridad a los transeúntes de esa importante arteria vial.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(30, 31)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-31">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(31)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(31, 30)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/periodista_museo_obstruccion.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Día del Periodista fue conmemorado</h2>
+        <p>La Asociación de Periodistas de Guatemala realizó en Quetzaltenango un programa para conmemorar el Día del Periodista, en el que se rindió homenaje al periodista Francisco Ávila, el más antiguo de la ciudad, por sus 64 años de labor informativa.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Museo permanecerá cerrado</h2>
+        <p>El Departamento de Museos de la Casa de la Cultura de Occidente informó que permanecería cerrado por vacaciones del personal durante varias semanas, situación que generó opiniones divididas entre quienes consideraban que el museo debía mantenerse abierto en esa temporada.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Molesta obstrucción en calle de El Calvario</h2>
+        <p>Vecinos se quejaron de unos postes ubicados en una acera frente a un comercio de la calle de El Calvario, que habían sido doblados hacia la vía pública por personas inescrupulosas, obligando a los transeúntes a bajarse de la acera con riesgo para su seguridad.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(31, 32)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-32">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(32)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(32, 31)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/velasquez_rotario_torre.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Club Rotario recibe a Rudolf Walther</h2>
+        <p>El Club Rotario de Quetzaltenango celebró una sesión-almuerzo en la aldea infantil "Rudolf Walther" de Salcajá, con motivo de la visita del ciudadano alemán que da nombre a esa institución, benefactor de la niñez del lugar.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Torre de radio en riesgo de derrumbe</h2>
+        <p>Vecinos de la aldea Nueva Esperanza alertaron sobre el peligro de derrumbe de una torre de una radioemisora local, ubicada en el sector, ante el temor de que sus soportes cedieran y provocara la caída de la estructura de hierro.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(32, 33)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-33">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(33)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(33, 32)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/eclipse.webp">
+          </div>
+          <div class="modal-info">
+        <h2>El Eclipse: un acontecimiento digno de recordarse</h2>
+        <p>Crónica sobre el eclipse total de sol del 11 de julio, calificado como el fenómeno más extraordinario del siglo XX observado en Quetzaltenango, que provocó la suspensión de actividades, el descenso de la temperatura y reacciones de temor en parte de la población, quedando registrado con fotografías del Parque Centroamérica y la Terminal de Buses Minerva durante el fenómeno.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / elQuetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(33, 34)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-34">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(34)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(34, 33)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/cruzroja_mejoras_pavimento.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Cruz Roja Departamental sí está haciendo obra</h2>
+        <p>Directivos de la Cruz Roja Departamental de Quetzaltenango respondieron a comentarios sobre la falta de labor de la institución, detallando los servicios de salud que prestan a la población necesitada, la dotación de camas y equipo con que cuentan, y sus planes de reestructuración.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Mejoras a la Plazuela Tecún Umán</h2>
+        <p>El alcalde municipal, ingeniero Omar de León Argueta, visitó junto a personal municipal la plazuela dedicada al héroe nacional Tecún Umán, con el fin de realizar mejoras y darle el mantenimiento necesario a ese espacio público.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Pavimentación y gestiones municipales</h2>
+        <p>Se documentan avances en la fundición de pavimento en la 2a. calle de la zona 2, supervisados por el alcalde municipal, así como la gestión del Comité Pro Mejoramiento de la Colonia Minerva ante el Concejo Municipal para solicitar apoyo en la mejora de instalaciones deportivas de esa colonia.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(34, 35)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-35">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(35)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(35, 34)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/panoramica1990.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Panorámica de Quetzaltenango (1990)</h2>
+        <p>Reportaje fotográfico que recorre distintos puntos de la ciudad: la vista panorámica desde el mirador "El Baúl", el Centro Comercial Ramos, un tramo del acueducto colonial cerca del barrio Garibaldi, el Centro Comercial Dolco, el Templo Minerva con sus columnas, la calle Rodolfo Robles y los característicos callejones angostos de la zona antigua de la ciudad.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / elQuetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(35, 36)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-36">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(36)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(36, 35)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/homenaje_santiaguito.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Homenaje al legado periodístico y literario altense</h2>
+        <p>Acto cultural en el que se rindió homenaje a la trayectoria del escritor Carlos Román Alvarado Pinto, en un evento que también recordó a otras figuras destacadas de las letras y el periodismo quetzalteco, como Baltazar Estupinián y el historiador Antonio Grimaldi.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Peligro latente del volcán Santiaguito</h2>
+        <p>Reportaje sobre la actividad volcánica extraordinaria del Santiaguito, que en esas fechas había cobrado la vida de cuatro montañistas altenses y continuaba causando daños a los cultivos de la costa sur con la ceniza y arena que expulsaba, pese a lo espectacular de sus erupciones.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(36, 37)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-37">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(37)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(37, 36)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/catedral_espiritu_santo.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Catedral del Espíritu Santo</h2>
+        <p>Nota gráfica sobre la Catedral del Espíritu Santo, ubicada en el centro de la ciudad, que alberga la sede del Obispado de la Diócesis de los Altos.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / elQuetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(37, 38)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-38">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(38)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(38, 37)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/minerva_parque.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Minerva, Parque Conmemorativo</h2>
+        <p>Reportaje sobre la construcción, iniciada en 1997, de Minerva Parque Conmemorativo, un cementerio de más de una hectárea dentro del perímetro del Cementerio General de Quetzaltenango, diseñado por el arquitecto Fernando Sáenz con arquitectura neoclásica, que incluye un Gran Templo y nueve capillas, y que fue autorizado por la Corporación Municipal en 1997.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / elQuetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(38, 39)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-39">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(39)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(39, 38)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/caso_gerardi.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Caso Gerardi: un reto para la justicia</h2>
+        <p>A tres años del asesinato de monseñor Juan José Gerardi Conedera, ocurrido en 1998 en la capital, el diario recoge que la población altense confiaba en que el proceso judicial lograra esclarecer a los autores materiales e intelectuales del crimen, entonces catalogado como uno de los casos de derechos humanos más relevantes del país. La misma edición reporta protestas ciudadanas que, según se denunció, dañaron con pintura algunos monumentos históricos del centro de Quetzaltenango.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco / elQuetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(39, 40)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-40">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal(40)">&times;</span>
+        <button class="flecha-modal flecha-modal-izq" onclick="cambiarFoto(40, 39)">&#10094;</button>
+        <div class="modal-split">
+          <div class="modal-fotos">
+        <img src="imagenes/noticias2/catedral_restauracion_pnc.webp">
+          </div>
+          <div class="modal-info">
+        <h2>Restauración de la fachada de la Catedral (2001)</h2>
+        <p>Se documenta la inauguración de la fachada restaurada de la Catedral de Quetzaltenango, trabajo financiado con Q2 millones aportados por la Cooperación Española y supervisado por el Instituto de Antropología e Historia, que empleó a alumnos de la escuela-taller Agatón Boj en la reconstrucción de molduras, frisos y rosetones.</p>
+       <h2>Posible cambio de comisario de la PNC</h2>
+        <p>Nota sobre versiones de un posible cambio del comisario de la Policía Nacional Civil en Quetzaltenango, en medio de tensiones reportadas entre la gobernadora departamental y la jefatura policial de la época.</p>
+        <hr style="border:none;border-top:1px dashed #ccc;margin:18px 0;">
+        <h2>Posible cambio de comisario de la PNC</h2>
+        <p>Nota sobre versiones de un posible cambio del comisario de la Policía Nacional Civil en Quetzaltenango, en medio de tensiones reportadas entre la gobernadora departamental y la jefatura policial de la época.</p>
+        <hr class="linea-pie">
+        <p class="pie-foto">Periodico El Quetzalteco - Hemeroteca</p>
+        </div>
+        </div>
+        <button class="flecha-modal flecha-modal-der" onclick="cambiarFoto(40, 1)">&#10095;</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- PIE DE PAGINA NEGRO -->
+  <footer class="pie-negro">
+    @Copyright 2010-2026. Biblioteca Municipal
+  </footer>
+
+  <!-- AQUI SE CONECTA EL ARCHIVO DE JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>

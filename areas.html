@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Áreas - Biblioteca Municipal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="franja"></div>
+
+  <!-- CABECERA: LOGOS Y NAVEGACION ENTRE PAGINAS -->
+  <header class="cabecera">
+    <div class="cabecera-in">
+      <a class="marca" href="index.html">
+        <img src="imagenes/biblioteca_logo.webp" alt="Biblioteca Municipal Alberto Velásquez">
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="areas.html" aria-current="page">Áreas</a>
+        <a href="lugares.html">Hechos históricos</a>
+        <a href="personas.html">Personajes</a>
+      </nav>
+      <img class="escudo" src="imagenes/muni_logo.png" alt="Municipalidad de Quetzaltenango">
+    </div>
+  </header>
+
+    <!-- TITULO DE LA PAGINA -->
+  <div class="banner">
+    <div class="banner-in">
+      <h1>Áreas de la Biblioteca</h1>
+    </div>
+  </div>
+
+  <!-- CONTENIDO CENTRAL -->
+  <main id="contenido">
+
+    <!-- CUADRICULA DE AREAS CON SUS VIDEOS -->
+    <div class="areas-grid">
+
+          <div class="area-card">
+        <p class="area-titulo">Dirección Academica</p>
+        <div class="area-thumb" role="button" tabindex="0" onclick="abrirVideo('director_biblioteca')">
+          <img src="imagenes/videos_thumbs/director_biblioteca.jpg" alt="Dirección de la Biblioteca" loading="lazy">
+          <span class="play-icon" aria-hidden="true">&#9658;</span>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <p class="area-titulo">Hemeroteca</p>
+        <div class="area-thumb" role="button" tabindex="0" onclick="abrirVideo('hemeroteca')">
+          <img src="imagenes/videos_thumbs/hemeroteca.jpg" alt="Hemeroteca" loading="lazy">
+          <span class="play-icon" aria-hidden="true">&#9658;</span>
+        </div>
+      </div>
+
+
+
+      <div class="area-card">
+        <p class="area-titulo">Biblioteca Infantil</p>
+        <div class="area-thumb" role="button" tabindex="0" onclick="abrirVideo('area_infantil')">
+          <img src="imagenes/videos_thumbs/area_infantil.jpg" alt="Área Infantil" loading="lazy">
+          <span class="play-icon" aria-hidden="true">&#9658;</span>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <p class="area-titulo">Biblioteca General</p>
+        <div class="area-thumb" role="button" tabindex="0" onclick="abrirVideo('fondo_general')">
+          <img src="imagenes/videos_thumbs/fondo_general.jpg" alt="Fondo General Bibliográfico" loading="lazy">
+          <span class="play-icon" aria-hidden="true">&#9658;</span>
+        </div>
+      </div>
+
+
+      <div class="area-card">
+        <p class="area-titulo">Biblioteca del Banco de Guatemala</p>
+        <div class="area-thumb" role="button" tabindex="0" onclick="abrirVideo('banco_guatemala')">
+          <img src="imagenes/videos_thumbs/banco_guatemala.jpg" alt="Biblioteca del Banco de Guatemala" loading="lazy">
+          <span class="play-icon" aria-hidden="true">&#9658;</span>
+        </div>
+      </div>
+
+  
+      
+      
+      <div class="area-card">
+        <p class="area-titulo">Biblioteca Plazuela San Antonio</p>
+        <div class="area-thumb" role="button" tabindex="0" onclick="abrirVideo('plazuela_san_antonio')">
+          <img src="imagenes/videos_thumbs/plazuela_san_antonio.jpg" alt="Biblioteca Plazuela San Antonio Zona 1" loading="lazy">
+          <span class="play-icon" aria-hidden="true">&#9658;</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- VENTANAS EMERGENTES CON LOS VIDEOS REPRODUCIBLES -->
+
+  <div class="modal-video" id="modal-video-area_infantil" onclick="cerrarVideoFondo(event, 'area_infantil')">
+    <button type="button" class="cerrar cerrar-foto" aria-label="Cerrar video" onclick="cerrarVideo('area_infantil')">&times;</button>
+    <video id="video-area_infantil" controls preload="none" onclick="event.stopPropagation()">
+      <source src="videos/area_infantil.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="modal-video" id="modal-video-banco_guatemala" onclick="cerrarVideoFondo(event, 'banco_guatemala')">
+    <button type="button" class="cerrar cerrar-foto" aria-label="Cerrar video" onclick="cerrarVideo('banco_guatemala')">&times;</button>
+    <video id="video-banco_guatemala" controls preload="none" onclick="event.stopPropagation()">
+      <source src="videos/banco_guatemala.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="modal-video" id="modal-video-director_biblioteca" onclick="cerrarVideoFondo(event, 'director_biblioteca')">
+    <button type="button" class="cerrar cerrar-foto" aria-label="Cerrar video" onclick="cerrarVideo('director_biblioteca')">&times;</button>
+    <video id="video-director_biblioteca" controls preload="none" onclick="event.stopPropagation()">
+      <source src="videos/director_biblioteca.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="modal-video" id="modal-video-fondo_general" onclick="cerrarVideoFondo(event, 'fondo_general')">
+    <button type="button" class="cerrar cerrar-foto" aria-label="Cerrar video" onclick="cerrarVideo('fondo_general')">&times;</button>
+    <video id="video-fondo_general" controls preload="none" onclick="event.stopPropagation()">
+      <source src="videos/fondo_general.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="modal-video" id="modal-video-hemeroteca" onclick="cerrarVideoFondo(event, 'hemeroteca')">
+    <button type="button" class="cerrar cerrar-foto" aria-label="Cerrar video" onclick="cerrarVideo('hemeroteca')">&times;</button>
+    <video id="video-hemeroteca" controls preload="none" onclick="event.stopPropagation()">
+      <source src="videos/hemeroteca.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="modal-video" id="modal-video-plazuela_san_antonio" onclick="cerrarVideoFondo(event, 'plazuela_san_antonio')">
+    <button type="button" class="cerrar cerrar-foto" aria-label="Cerrar video" onclick="cerrarVideo('plazuela_san_antonio')">&times;</button>
+    <video id="video-plazuela_san_antonio" controls preload="none" onclick="event.stopPropagation()">
+      <source src="videos/plazuela_san_antonio.mp4" type="video/mp4">     
+    </video>
+  </div>
+
+    <!-- PIE DE PAGINA -->
+  <footer class="pie-negro">
+    <div class="pie-in">
+      <p class="copy">@Copyright 2010-2026. Biblioteca Municipal</p>
+    </div>
+  </footer>
+
+  <!-- AQUI SE CONECTA EL ARCHIVO DE JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
